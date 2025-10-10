@@ -2,6 +2,17 @@ import Image from "next/image";
 import CounterApp from '@/app/ui/counter';
 import ColorPicker from '@/app/ui/color-picker';
 import TodoList from  '@/app/ui/todo-list';
+import BookList from '@/app/ui/books';
+import AddBooks from '@/app/ui/add-books';
+import FilterBooks from '@/app/ui/filter-books';
+import SortBooks from '@/app/ui/sort-books';
+import Pagination from '@/app/ui/pagination';
+
+const books = [
+  {id: 1, title: "Learning React", author: "Daniel", year: 2002},
+  {id: 2, title: "Learning Next", author: "Adam", year: 2003},
+  {id: 3, title: "Learning Redux", author: "Smith", year: 2004},
+]
 
 export default function Home() {
   return (
@@ -21,6 +32,24 @@ export default function Home() {
           <CounterApp/>
           <ColorPicker />
           <TodoList />
+
+          <p>Implement a component to display list of books details</p> 
+          <div className="flex flex-col gap-2 p-5 bg-sky-100 mt-[20px] mb-[35px]">
+            {books.length > 0 && books.map((book) => (
+              <BookList
+                key={book.id}
+                id={book.id}
+                title={book.title}
+                author={book.author}
+                year={book.year}
+              />
+            ))}
+          </div>
+
+          <AddBooks/>
+          <FilterBooks/>
+          <SortBooks />
+          <Pagination />
         </div>
       </main>
     </div>
