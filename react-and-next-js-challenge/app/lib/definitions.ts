@@ -5,8 +5,7 @@ export type booksDetails = {
 	year?: number
 }
 export type SplitScreenProps = {
-	left: React.ComponentType;
-	right: React.ComponentType;
 	leftWeight?: number;
 	rightWeight?: number;
+	children: React.ReactNode[];
 };

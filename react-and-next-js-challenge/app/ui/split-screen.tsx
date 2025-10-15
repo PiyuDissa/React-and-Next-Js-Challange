@@ -1,6 +1,7 @@
 'use client';
 import styled from "styled-components"; 
 import { SplitScreenProps } from '../lib/definitions';
+import { Children } from "react";
 
 const Container = styled.div`
 	display: flex;
@@ -12,14 +13,16 @@ const Pane = styled.div<{ weight?: number }>`
 	padding: 10px;
 `;
 
-export default function SplitScreen({left: Left, leftWeight = 1, right: Right, rightWeight = 1}: SplitScreenProps) {
+export default function SplitScreen({leftWeight = 1, rightWeight = 1, children}: SplitScreenProps) {
+	const [ left, right ] = children;
+	
 	return (
 		<Container>
 			<Pane weight={leftWeight}>
-				<Left />
+				{left}
 			</Pane>
 			<Pane weight={rightWeight}>
-				<Right />
+				{right}
 			</Pane>
 		</Container>
 	)
