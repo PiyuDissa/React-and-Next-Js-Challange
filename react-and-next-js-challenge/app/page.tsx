@@ -7,6 +7,7 @@ import FilterBooks from '@/app/ui/filter-books';
 import SortBooks from '@/app/ui/sort-books';
 import Pagination from '@/app/ui/pagination';
 import SplitScreen from '@/app/ui/split-screen';
+import Modal from '@/app/ui/modal';
 
 const books = [
   {id: 1, title: "Learning React", author: "Daniel", year: 2002},
@@ -50,6 +51,13 @@ export default function Home() {
               <ColorPicker />
             </SplitScreen>
           </div>
+
+          <Modal>
+            <SplitScreen leftWeight={1} rightWeight={1}>
+              <CounterApp />
+              <ColorPicker />
+            </SplitScreen>
+          </Modal>
         </div>
       </main>
     </div>
