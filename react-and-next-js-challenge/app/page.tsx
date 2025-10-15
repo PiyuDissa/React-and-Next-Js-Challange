@@ -7,6 +7,7 @@ import AddBooks from '@/app/ui/add-books';
 import FilterBooks from '@/app/ui/filter-books';
 import SortBooks from '@/app/ui/sort-books';
 import Pagination from '@/app/ui/pagination';
+import SplitScreen from '@/app/ui/split-screen';
 
 const books = [
   {id: 1, title: "Learning React", author: "Daniel", year: 2002},
@@ -50,6 +51,16 @@ export default function Home() {
           <FilterBooks/>
           <SortBooks />
           <Pagination />
+
+          <p>Implement a Split Screen component</p>
+          <div className="w-full border p-5 bg-sky-100 mt-[20px] mb-[35px]">
+            <SplitScreen 
+              left={CounterApp}
+              leftWeight={2}
+              right={ColorPicker}
+              rightWeight={1}
+            />
+          </div>
         </div>
       </main>
     </div>
