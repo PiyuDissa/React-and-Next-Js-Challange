@@ -45,6 +45,8 @@ export default function Home() {
           <SortBooks />
           <Pagination />
 
+          <h1 className="text-[40px]">Level 2 — React Design Pattens</h1>
+			    <h2 className="text-[30px]">Focus: Split components, Layout Cmponents, Uncontrolled and Controlled components, Higher Order Components, Custom Hooks Patterns and, Functional Programming </h2>
           <p>Implement a Split Screen component</p>
           <div className="w-full border p-5 bg-sky-100 mt-[20px] mb-[35px]">
             <SplitScreen leftWeight={2} rightWeight={1}>
