@@ -8,6 +8,7 @@ import SortBooks from '@/app/ui/sort-books';
 import Pagination from '@/app/ui/pagination';
 import SplitScreen from '@/app/ui/split-screen';
 import Modal from '@/app/ui/modal';
+import UncontrolledForm from '@/app/ui/uncontrolled-form';
 
 const books = [
   {id: 1, title: "Learning React", author: "Daniel", year: 2002},
@@ -52,12 +53,19 @@ export default function Home() {
             </SplitScreen>
           </div>
 
-          <Modal>
-            <SplitScreen leftWeight={1} rightWeight={1}>
-              <CounterApp />
-              <ColorPicker />
-            </SplitScreen>
-          </Modal>
+          <div className="w-full border p-5 bg-sky-100 mt-[20px] mb-[35px]">
+            <Modal>
+              <SplitScreen leftWeight={1} rightWeight={1}>
+                <CounterApp />
+                <ColorPicker />
+              </SplitScreen>
+            </Modal>
+          </div>
+
+          <p>Uncontrolled form</p>
+          <div className="w-full border p-5 bg-sky-100 mt-[20px] mb-[35px]">
+            <UncontrolledForm />
+          </div>
         </div>
       </main>
     </div>
